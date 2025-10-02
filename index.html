@@ -487,8 +487,14 @@ margin: 0rem !important;
                 </div>
                 <div class="w-layout-grid contact11_content">
                   <div class="contact11_form-block w-form">
-                    <form name="Contact-11-Form" method="POST" data-netlify="true" class="contact11_form">
+                    <form name="Contact-11-Form" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact11_form">
+                      <!-- Netlify hidden input -->
                       <input type="hidden" name="form-name" value="Contact-11-Form">
+
+                      <!-- Honeypot field (spam protection) -->
+                      <p style="display:none">
+                        <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
+                      </p>
 
                       <div class="form_field-wrapper">
                         <label for="Name" class="form_field-label">Name</label>
@@ -510,6 +516,7 @@ margin: 0rem !important;
 
                       <input type="submit" class="button w-button" value="Submit Form">
                     </form>
+
 
                     <div class="form_message-success-wrapper w-form-done">
                       <div class="form_message-success">
